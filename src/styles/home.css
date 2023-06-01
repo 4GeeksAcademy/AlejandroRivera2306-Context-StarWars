@@ -1,0 +1,92 @@
+.imagenlogo{
+    max-width: 13rem;
+}
+.cartascontenedor {
+    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    white-space: nowrap; /* Evita que las cartas se desplacen verticalmente */
+  }
+
+  .card {
+    gap: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    
+    }
+    .botonescarta{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+      .carta {
+        display: inline-block; /* Hace que las cartas se muestren en línea horizontal */
+        margin-right: 10px; 
+        margin-bottom: 10px;/* Espacio entre las cartas */
+        margin-top: 1rem;
+       
+      }
+      
+      .navbar{
+        margin-bottom: 10rem;
+      
+       
+        
+      }
+      .caracteristicas{
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        gap: 2rem;
+        color:gray
+    
+      }
+
+      .orange-bg {
+        background-color: orange;
+        /* Agrega otros estilos según tus necesidades */
+      }
+    
+      .paneldescripcion{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+        margin-left: 2rem;
+
+      }
+      .jumbotron{
+        margin-left: 2rem;
+      }
+      .titulos{
+        font-size: 5rem;
+        margin: 2rem 1rem;
+        color: yellow
+      }
+      .sable{
+        max-width: 50rem;
+      }
+      .favorito{
+        font-size: 3rem;
+        border-radius: 2rem;
+        margin-right: 3rem;
+        width: 20rem;
+
+      }
+      .footer{
+        color: white;
+      }
+      .jumbotron{
+        color:gray
+      }
+      .botondes{
+        font-size: 3rem;
+      }
+      .listafavoritos{
+        font-size: 1.5rem;
+      }
+      .lista{
+        max-width: 26rem;
+      }
+      .botonx{
+        font-size: 1.5rem;
+      }
+      .botonlearn{
+        font-size: 2rem;
+      }

@@ -11,10 +11,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					title: "SECOND",
 					background: "white",
 					initial: "white"
-				}
-			]
+				},
+			
+			],
+			message : [],
+			personajes: [],
+			planetas: []
+			
+			
 		},
 		actions: {
+			
+			
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
@@ -23,7 +31,37 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
+
+				
+					fetch("https://swapi.dev/api/people/")
+					  .then((res) => res.json())
+					  .then((data) => setStore({personajes: data.results}));
+
+					  fetch("https://swapi.dev/api/planets/")
+					  .then((res) => res.json())
+					  .then((data) => setStore({planetas: data.results}));
+				  
+				
 			},
+
+			cambiarMensaje: (messageText) => {
+				const store = getStore()
+				setStore({
+					message: [...store.message, messageText] // Agregar el nuevo mensaje al arreglo
+				})
+				// console.log(store.message)
+				 
+			  },
+			  FavoriteRemove: (name) => {
+				
+				const store = getStore();
+				setStore({
+					message: store.message.filter(uid => uid !== name)
+				});
+			  },
+
+
+			  
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
@@ -35,7 +73,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					return elm;
 				});
 
-				//reset the global store
+				//reset the global store 
 				setStore({ demo: demo });
 			}
 		}
